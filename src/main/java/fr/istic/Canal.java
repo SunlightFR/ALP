@@ -20,4 +20,10 @@ public class Canal implements ObserverDeCapteurAsync{
     public Future update(Capteur capteur) {
         return s.schedule(new Update(capteur, afficheur), 500, TimeUnit.MILLISECONDS);
     }
+
+    @Override
+    public Future<Integer> getValue(Capteur capteur){
+        return s.schedule(new GetValue(capteur), 500, TimeUnit.MILLISECONDS);
+    }
+
 }
