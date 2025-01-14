@@ -13,7 +13,7 @@ public class Afficheur implements ObserverDeCapteur {
 
     @Override
     public void update(Capteur capteur, CapteurAsync capteurAsync) {
-        System.out.println("update2");
+//        System.out.println("update2");
         Future<Integer> value = capteurAsync.getValue(capteur);
         try{
             System.out.println("Afficheur " + name + " : capteur " + capteur.getName() + " : " + value.get());
