@@ -1,7 +1,5 @@
 package fr.istic;
 
-import java.util.List;
-
 public class Update implements Runnable {
     private Capteur capteur;
     private ObserverDeCapteur afficheur;
@@ -15,7 +13,6 @@ public class Update implements Runnable {
 
     @Override
     public void run() {
-//        System.out.println("update");
         afficheur.update(capteur, canal);
     }
 }

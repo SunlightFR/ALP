@@ -1,11 +1,6 @@
 package fr.istic;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.Future;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class Canal implements ObserverDeCapteurAsync, CapteurAsync{
     private ScheduledExecutorService s;

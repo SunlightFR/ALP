@@ -7,20 +7,11 @@ import java.util.Objects;
 public class CapteurImpl implements Capteur{
     private final List<ObserverDeCapteurAsync> observers = new ArrayList<>();
     private int value = 0;
-    private String name;
-
-    public CapteurImpl(String name){
-        this.name = name;
-    }
-
-    @Override
-    public String getName(){
-        return name;
-    }
+    private AlgoDiffusion algo;
 
     @Override
     public int getValue() {
-        return value;
+        return algo.execute();
     }
 
     @Override
